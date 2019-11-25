@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "veiculos",
+  "info": {
+    "name": "veiculos",
+    "description": "Descrição dos veículos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": [
+      "created_at",
+      "updated_at"
+    ],
+    "comment": ""
+  },
+  "attributes": {
+    "Montadora": {
+      "type": "string",
+      "required": true
+    },
+    "Modelo": {
+      "type": "string",
+      "required": true
+    },
+    "Ano_Modelo": {
+      "type": "integer",
+      "required": true
+    },
+    "Valor": {
+      "type": "decimal",
+      "required": true
+    },
+    "Nome_Vendedor": {
+      "type": "string",
+      "required": true
+    },
+    "Telefone": {
+      "maxLength": 14,
+      "required": true,
+      "type": "string"
+    }
+  }
+}
