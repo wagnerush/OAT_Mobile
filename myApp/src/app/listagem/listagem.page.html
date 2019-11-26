@@ -3,22 +3,22 @@
   	<ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Carros a venda</ion-title>
+    <ion-title class="title">Carros a venda</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="dark">
 
     <ion-card *ngFor="let post of posts">
 	    <ion-img src="assets/listagem.jpg"></ion-img>
 	    <ion-card-header>
-			<ion-card-subtitle>
+			<ion-card-subtitle color="light">
 				{{ post.Montadora }} {{ post.Modelo }}
 			</ion-card-subtitle>
 	    </ion-card-header>
-	    <ion-card-content>
+	    <ion-card-content class="color">
 			<p>
-			{{post.Ano_Modelo}}
+			Ano:{{post.Ano_Modelo}}   Valor:{{post.Valor}} 
 			</p>
 			<ion-button ion-button expand="block" fill="outline" (click)="presentModal(post)" large>Detalhes</ion-button>
       <ion-button ion-button color="warning" expand="block" fill="outline" (click)="editItem(post)" large>Editar</ion-button>
